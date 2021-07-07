@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Lista de livros</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/index.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h2>Minha lista de livros</h2>
+    <input placeholder="Adicione um livro" type="text" class="js-novo-livro form-control"> <br>
+    <input placeholder="Nome do autor" type="text" class="js-novo-autor form-control"> <br>
+    <button @click="addItem" class="js-add btn btn-primary btn-block" type="button">Adicionar!</button>
+    <ul>
+      <li>
+        <div class="checkbox">
+          <label>
+            <input class="js-livro" name="list" type="checkbox" />
+            <big>Alice no País das Maravilhas</big> - <small>Lewis Carrol</small>
+          </label>
+        </div>
+      </li>
+      <li>
+        <div class="checkbox">
+          <label>
+            <input class="js-livro" name="list" type="checkbox">
+            <big>A Menina que Roubava Livros</big> - <small>Markus Zusak</small>
+          </label>
+        </div>
+      </li>
+      <li class="removido">
+        <div class="checkbox">
+          <label>
+            <input class="js-livro" name="list" type="checkbox" checked>
+            <big>O Senhor dos Anéis - As Duas Torres</big> - <small>J. R. R. Tolkien</small>
+          </label>
+        </div>
+      </li>
+    </ul>
+  </div>
+</body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+
+</html>
