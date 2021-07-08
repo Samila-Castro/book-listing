@@ -1,3 +1,20 @@
+var data = {
+  livros: [{
+      titulo: 'Orange is The New Black',
+      autor: 'Piper Kerman',
+      checked: true
+    },
+    {
+      titulo: 'A Origem das Espécies',
+      autor: 'Charles Darwin',
+      checked: false
+    }
+  ],
+  cabecalho: 'Livros Preferidos',
+  novoLivro: '',
+  novoAutor: ''
+};
+
 /**
  * Declarando os componentes
  */
@@ -53,33 +70,19 @@ var AddItemComp = Vue.extend({
     '  <button @click="addLivro" class="js-add btn btn-primary btn-block"' +
     ' type="button">Adicionar!</button>' +
     '</span>' +
-    '<div>'
+    '</div>'
 });
 
 /**
  * Registrando componentes
  */
- Vue.component('itens-comp', ItensComp);
- Vue.component('altera-titulo-comp', AlteraTituloComp);
- Vue.component('add-item-comp', AddItemComp);
+Vue.component('itens-comp', ItensComp);
+Vue.component('altera-titulo-comp', AlteraTituloComp);
+Vue.component('add-item-comp', AddItemComp);
 
-var data = {
-  livros: [{
-      titulo: 'Orange is The New Black',
-      autor: 'Piper Kerman',
-      checked: true
-    },
-    {
-      titulo: 'A Origem das Espécies',
-      autor: 'Charles Darwin',
-      checked: false
-    }
-  ],
-  cabecalho: 'Livros Preferidos',
-  novoLivro: '',
-  novoAutor: ''
-};
-
+/**
+ * Instanciando o Vue
+ */
 new Vue({
   el: '#app',
   data: data
